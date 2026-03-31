@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw
+    project: czech-banking-analysis
+    dataset: raw
+    tables:
+      - name: transactions
+      - name: accounts
+      - name: clients
+      - name: dispositions
+      - name: loans
+      - name: credit_cards
+      - name: orders
+      - name: districts
