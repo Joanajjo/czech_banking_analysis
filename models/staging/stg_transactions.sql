@@ -9,7 +9,7 @@ renamed as (
         trans_id as transaction_id,
         account_id,
         parse_date('%y%m%d', cast(date as string)) as transaction_date,
-        'type' as transaction_type,
+        type as transaction_type,
         operation as operation_type,
         amount as transaction_amount,
         balance as balance_after_transaction,
