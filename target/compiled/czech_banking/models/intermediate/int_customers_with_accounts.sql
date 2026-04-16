@@ -1,0 +1,28 @@
+with clients as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_clients`
+),
+
+dispositions as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_dispositions`
+),
+
+accounts as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_accounts`
+),
+
+customers_with_accounts as (
+    select
+        c.client_id,
+        c.gender,
+        c.date_of_birth,
+        date_diff(current_date(), c.date_of_birth, year)  as age,
+        d.account_id,
+        d.disposition_type                                       as account_role,
+        a.frequency,
+        a.account_created_on
+    from clients c
+    left join dispositions d using (client_id)
+    left join accounts a using (account_id)
+)
+
+select * from customers_with_accounts

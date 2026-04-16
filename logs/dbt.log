@@ -3338,3 +3338,489 @@ select * from accounts_enriched;
 [0m09:51:22.893383 [debug] [MainThread]: Flushing usage events
 [0m09:51:23.706649 [debug] [MainThread]: An error was encountered while trying to flush usage events
 [0m09:51:25.177342 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:35:42.968704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234EA5B3DA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234EA5B0140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234EA5B0E00>]}
+
+
+============================== 12:35:42.979043 | 399f0bbe-6ecf-4e9a-b788-ec274f1651fe ==============================
+[0m12:35:42.979043 [info ] [MainThread]: Running with dbt=1.11.7
+[0m12:35:42.980040 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\joana.jo\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --select int_customers_with_accounts', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\joana.jo\\czech_banking\\czech_banking\\logs'}
+[0m12:35:46.830361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '399f0bbe-6ecf-4e9a-b788-ec274f1651fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234FFA56BD0>]}
+[0m12:35:46.941825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '399f0bbe-6ecf-4e9a-b788-ec274f1651fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234FFA0F4D0>]}
+[0m12:35:46.941825 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m12:35:48.167039 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m12:35:48.455517 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:35:48.456499 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m12:35:48.457499 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:35:48.467297 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.czech_banking.marts.finance.fct_transactions
+- models.czech_banking.marts
+[0m12:35:48.527573 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '399f0bbe-6ecf-4e9a-b788-ec274f1651fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234FFEA3140>]}
+[0m12:35:48.710272 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\manifest.json
+[0m12:35:48.716577 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\semantic_manifest.json
+[0m12:35:48.788054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '399f0bbe-6ecf-4e9a-b788-ec274f1651fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002348769D4F0>]}
+[0m12:35:48.789055 [info ] [MainThread]: Found 8 models, 8 sources, 538 macros
+[0m12:35:48.790062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '399f0bbe-6ecf-4e9a-b788-ec274f1651fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234872A0EC0>]}
+[0m12:35:48.793060 [info ] [MainThread]: 
+[0m12:35:48.794060 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m12:35:48.795059 [info ] [MainThread]: 
+[0m12:35:48.796061 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:35:48.801225 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_czech-banking-analysis'
+[0m12:35:48.802276 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:35:55.773374 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_czech-banking-analysis_dbt_dev'
+[0m12:35:55.775401 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:35:56.850848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '399f0bbe-6ecf-4e9a-b788-ec274f1651fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234872A3440>]}
+[0m12:35:56.851846 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:35:56.864229 [debug] [Thread-1 (]: Began running node model.czech_banking.int_customers_with_accounts
+[0m12:35:56.865503 [info ] [Thread-1 (]: 1 of 1 START sql view model dbt_dev.int_customers_with_accounts ................ [RUN]
+[0m12:35:56.866450 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.czech_banking.int_customers_with_accounts'
+[0m12:35:56.867451 [debug] [Thread-1 (]: Began compiling node model.czech_banking.int_customers_with_accounts
+[0m12:35:56.878187 [debug] [Thread-1 (]: Writing injected SQL for node "model.czech_banking.int_customers_with_accounts"
+[0m12:35:56.880144 [debug] [Thread-1 (]: Began executing node model.czech_banking.int_customers_with_accounts
+[0m12:35:56.927422 [debug] [Thread-1 (]: Writing runtime sql for node "model.czech_banking.int_customers_with_accounts"
+[0m12:35:56.928932 [debug] [Thread-1 (]: On model.czech_banking.int_customers_with_accounts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.int_customers_with_accounts"} */
+
+
+  create or replace view `czech-banking-analysis`.`dbt_dev`.`int_customers_with_accounts`
+  OPTIONS()
+  as with clients as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_clients`
+),
+
+dispositions as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_dispositions`
+),
+
+accounts as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_accounts`
+),
+
+customers_with_accounts as (
+    select
+        c.client_id,
+        c.gender,
+        c.date_of_birth,
+        date_diff(current_date(), c.date_of_birth, year)  as age,
+        d.account_id,
+        d.disp_type                                        as account_role,
+        a.frequency,
+        a.account_created_on
+    from clients c
+    left join dispositions d using (client_id)
+    left join accounts a using (account_id)
+)
+
+select * from customers_with_accounts;
+
+
+[0m12:35:56.929945 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:35:58.704145 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:36e22191-6879-415c-afd3-404c5c87316b&page=queryresults
+[0m12:35:58.845122 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:36e22191-6879-415c-afd3-404c5c87316b&page=queryresults
+[0m12:35:58.864287 [debug] [Thread-1 (]: Database Error in model int_customers_with_accounts (models\intermediate\int_customers_with_accounts.sql)
+  Name disp_type not found inside d at [25:11]
+  compiled code at target\run\czech_banking\models\intermediate\int_customers_with_accounts.sql
+[0m12:35:58.866338 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '399f0bbe-6ecf-4e9a-b788-ec274f1651fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234E9EA6F00>]}
+[0m12:35:58.868346 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model dbt_dev.int_customers_with_accounts ....... [[31mERROR[0m in 2.00s]
+[0m12:35:58.868346 [debug] [Thread-1 (]: Finished running node model.czech_banking.int_customers_with_accounts
+[0m12:35:58.868346 [debug] [Thread-7 (]: Marking all children of 'model.czech_banking.int_customers_with_accounts' to be skipped because of status 'error'.  Reason: Database Error in model int_customers_with_accounts (models\intermediate\int_customers_with_accounts.sql)
+  Name disp_type not found inside d at [25:11]
+  compiled code at target\run\czech_banking\models\intermediate\int_customers_with_accounts.sql.
+[0m12:35:58.874072 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:35:58.875074 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:35:58.876071 [debug] [MainThread]: Connection 'list_czech-banking-analysis' was properly closed.
+[0m12:35:58.876071 [debug] [MainThread]: Connection 'list_czech-banking-analysis_dbt_dev' was properly closed.
+[0m12:35:58.877072 [debug] [MainThread]: Connection 'model.czech_banking.int_customers_with_accounts' was properly closed.
+[0m12:35:58.877072 [info ] [MainThread]: 
+[0m12:35:58.878071 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 10.08 seconds (10.08s).
+[0m12:35:58.880075 [debug] [MainThread]: Command end result
+[0m12:35:58.911983 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\manifest.json
+[0m12:35:58.915947 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\semantic_manifest.json
+[0m12:35:58.924345 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\joana.jo\czech_banking\czech_banking\target\run_results.json
+[0m12:35:58.925353 [info ] [MainThread]: 
+[0m12:35:58.926352 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m12:35:58.927350 [info ] [MainThread]: 
+[0m12:35:58.928352 [error] [MainThread]: [31mFailure in model int_customers_with_accounts (models\intermediate\int_customers_with_accounts.sql)[0m
+[0m12:35:58.929351 [error] [MainThread]:   Database Error in model int_customers_with_accounts (models\intermediate\int_customers_with_accounts.sql)
+  Name disp_type not found inside d at [25:11]
+  compiled code at target\run\czech_banking\models\intermediate\int_customers_with_accounts.sql
+[0m12:35:58.930860 [info ] [MainThread]: 
+[0m12:35:58.931868 [info ] [MainThread]:   compiled code at target\compiled\czech_banking\models\intermediate\int_customers_with_accounts.sql
+[0m12:35:58.933381 [info ] [MainThread]: 
+[0m12:35:58.934390 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m12:35:58.936396 [debug] [MainThread]: Command `dbt run` failed at 12:35:58.936396 after 16.19 seconds
+[0m12:35:58.937396 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234EAA7A6F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023487226510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234FF022180>]}
+[0m12:35:58.938396 [debug] [MainThread]: Flushing usage events
+[0m12:36:00.128059 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:36:47.636305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FA691E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213F6F1A720>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FA693F50>]}
+
+
+============================== 12:36:47.643536 | 367e6803-b2f3-4e71-be62-96cc990af867 ==============================
+[0m12:36:47.643536 [info ] [MainThread]: Running with dbt=1.11.7
+[0m12:36:47.644536 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\joana.jo\\.dbt', 'invocation_command': 'dbt run --select int_customers_with_accounts', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\joana.jo\\czech_banking\\czech_banking\\logs'}
+[0m12:36:49.650489 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '367e6803-b2f3-4e71-be62-96cc990af867', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FBEA3EF0>]}
+[0m12:36:49.736447 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '367e6803-b2f3-4e71-be62-96cc990af867', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213F7A028D0>]}
+[0m12:36:49.738445 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m12:36:50.292480 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m12:36:50.439273 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:36:50.439273 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m12:36:50.440286 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:36:50.445852 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.czech_banking.marts.finance.fct_transactions
+- models.czech_banking.marts
+[0m12:36:50.472324 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '367e6803-b2f3-4e71-be62-96cc990af867', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021397268DA0>]}
+[0m12:36:50.550255 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\manifest.json
+[0m12:36:50.553778 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\semantic_manifest.json
+[0m12:36:50.575978 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '367e6803-b2f3-4e71-be62-96cc990af867', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002139755DF10>]}
+[0m12:36:50.577013 [info ] [MainThread]: Found 8 models, 8 sources, 538 macros
+[0m12:36:50.577013 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '367e6803-b2f3-4e71-be62-96cc990af867', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213975A6C90>]}
+[0m12:36:50.580009 [info ] [MainThread]: 
+[0m12:36:50.580009 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m12:36:50.581862 [info ] [MainThread]: 
+[0m12:36:50.584437 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:36:50.586448 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_czech-banking-analysis'
+[0m12:36:50.587426 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:36:54.467850 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_czech-banking-analysis_dbt_dev'
+[0m12:36:54.469962 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:36:55.316321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '367e6803-b2f3-4e71-be62-96cc990af867', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021397268DA0>]}
+[0m12:36:55.316321 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:36:55.322274 [debug] [Thread-1 (]: Began running node model.czech_banking.int_customers_with_accounts
+[0m12:36:55.322880 [info ] [Thread-1 (]: 1 of 1 START sql view model dbt_dev.int_customers_with_accounts ................ [RUN]
+[0m12:36:55.322880 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.czech_banking.int_customers_with_accounts'
+[0m12:36:55.324360 [debug] [Thread-1 (]: Began compiling node model.czech_banking.int_customers_with_accounts
+[0m12:36:55.333250 [debug] [Thread-1 (]: Writing injected SQL for node "model.czech_banking.int_customers_with_accounts"
+[0m12:36:55.334252 [debug] [Thread-1 (]: Began executing node model.czech_banking.int_customers_with_accounts
+[0m12:36:55.370307 [debug] [Thread-1 (]: Writing runtime sql for node "model.czech_banking.int_customers_with_accounts"
+[0m12:36:55.371345 [debug] [Thread-1 (]: On model.czech_banking.int_customers_with_accounts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.int_customers_with_accounts"} */
+
+
+  create or replace view `czech-banking-analysis`.`dbt_dev`.`int_customers_with_accounts`
+  OPTIONS()
+  as with clients as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_clients`
+),
+
+dispositions as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_dispositions`
+),
+
+accounts as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_accounts`
+),
+
+customers_with_accounts as (
+    select
+        c.client_id,
+        c.gender,
+        c.date_of_birth,
+        date_diff(current_date(), c.date_of_birth, year)  as age,
+        d.account_id,
+        d.disposition_type                                       as account_role,
+        a.frequency,
+        a.account_created_on
+    from clients c
+    left join dispositions d using (client_id)
+    left join accounts a using (account_id)
+)
+
+select * from customers_with_accounts;
+
+
+[0m12:36:55.372347 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:36:56.814830 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:ba8833e1-65b0-490e-b5cd-6cf366a1f372&page=queryresults
+[0m12:36:57.262374 [debug] [Thread-1 (]: SQL status: OK in 0.446 seconds
+[0m12:36:57.491046 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '367e6803-b2f3-4e71-be62-96cc990af867', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213970E6D80>]}
+[0m12:36:57.492559 [info ] [Thread-1 (]: 1 of 1 OK created sql view model dbt_dev.int_customers_with_accounts ........... [[32mCREATE VIEW (0 processed)[0m in 2.17s]
+[0m12:36:57.493569 [debug] [Thread-1 (]: Finished running node model.czech_banking.int_customers_with_accounts
+[0m12:36:57.496584 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:36:57.497577 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:36:57.497577 [debug] [MainThread]: Connection 'list_czech-banking-analysis' was properly closed.
+[0m12:36:57.498582 [debug] [MainThread]: Connection 'list_czech-banking-analysis_dbt_dev' was properly closed.
+[0m12:36:57.498582 [debug] [MainThread]: Connection 'model.czech_banking.int_customers_with_accounts' was properly closed.
+[0m12:36:57.498582 [info ] [MainThread]: 
+[0m12:36:57.499579 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 6.92 seconds (6.92s).
+[0m12:36:57.500581 [debug] [MainThread]: Command end result
+[0m12:36:57.526147 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\manifest.json
+[0m12:36:57.529144 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\semantic_manifest.json
+[0m12:36:57.537222 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\joana.jo\czech_banking\czech_banking\target\run_results.json
+[0m12:36:57.537222 [info ] [MainThread]: 
+[0m12:36:57.539581 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:36:57.540576 [info ] [MainThread]: 
+[0m12:36:57.540576 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m12:36:57.543099 [debug] [MainThread]: Command `dbt run` succeeded at 12:36:57.543099 after 10.12 seconds
+[0m12:36:57.544132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213F6F1A720>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FFC95340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213F9FB0650>]}
+[0m12:36:57.544132 [debug] [MainThread]: Flushing usage events
+[0m12:36:58.610549 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:43:54.822707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF54869700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF54B6A0F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF54B69160>]}
+
+
+============================== 12:43:54.832889 | f4db960c-00d3-4a2c-8366-fe759e00888f ==============================
+[0m12:43:54.832889 [info ] [MainThread]: Running with dbt=1.11.7
+[0m12:43:54.832889 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\joana.jo\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run --select fct_loans', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\joana.jo\\czech_banking\\czech_banking\\logs'}
+[0m12:43:56.711101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f4db960c-00d3-4a2c-8366-fe759e00888f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF5458A120>]}
+[0m12:43:56.774746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f4db960c-00d3-4a2c-8366-fe759e00888f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF5479DD30>]}
+[0m12:43:56.774746 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m12:43:57.220987 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m12:43:57.330060 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:43:57.330060 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m12:43:57.330060 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:43:57.344212 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.czech_banking.marts.finance.fct_transactions
+[0m12:43:57.367351 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f4db960c-00d3-4a2c-8366-fe759e00888f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF6F06E600>]}
+[0m12:43:57.432542 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\manifest.json
+[0m12:43:57.448484 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\semantic_manifest.json
+[0m12:43:57.464327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f4db960c-00d3-4a2c-8366-fe759e00888f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF71C6D3D0>]}
+[0m12:43:57.464327 [info ] [MainThread]: Found 9 models, 8 sources, 538 macros
+[0m12:43:57.464327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f4db960c-00d3-4a2c-8366-fe759e00888f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF71725220>]}
+[0m12:43:57.464327 [info ] [MainThread]: 
+[0m12:43:57.464327 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m12:43:57.464327 [info ] [MainThread]: 
+[0m12:43:57.464327 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:43:57.464327 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_czech-banking-analysis'
+[0m12:43:57.464327 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:44:01.412115 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_czech-banking-analysis_dbt_dev'
+[0m12:44:01.412115 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:44:02.257352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f4db960c-00d3-4a2c-8366-fe759e00888f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF71874E60>]}
+[0m12:44:02.257352 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:44:02.264217 [debug] [Thread-1 (]: Began running node model.czech_banking.fct_loans
+[0m12:44:02.264217 [info ] [Thread-1 (]: 1 of 1 START sql table model dbt_dev.fct_loans ................................. [RUN]
+[0m12:44:02.265219 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.czech_banking.fct_loans'
+[0m12:44:02.266261 [debug] [Thread-1 (]: Began compiling node model.czech_banking.fct_loans
+[0m12:44:02.274235 [debug] [Thread-1 (]: Writing injected SQL for node "model.czech_banking.fct_loans"
+[0m12:44:02.276219 [debug] [Thread-1 (]: Began executing node model.czech_banking.fct_loans
+[0m12:44:02.320750 [debug] [Thread-1 (]: Writing runtime sql for node "model.czech_banking.fct_loans"
+[0m12:44:02.320750 [debug] [Thread-1 (]: On model.czech_banking.fct_loans: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.fct_loans"} */
+
+  
+    
+
+    create or replace table `czech-banking-analysis`.`dbt_dev`.`fct_loans`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      with loans as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_loans`
+),
+
+accounts_enriched as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`int_accounts_enriched`
+),
+
+customers as (
+    select
+        account_id,
+        client_id,
+        gender,
+        date_of_birth,
+        age
+    from `czech-banking-analysis`.`dbt_dev`.`int_customers_with_accounts`
+),
+
+fct_loans as (
+    select
+        l.loan_id,
+        l.account_id,
+        l.loan_start_date,
+        l.loan_amount,
+        l.loan_duration_months,
+        l.monthly_payment,
+        l.loan_status,
+        l.loan_status_label,
+        l.loan_active_status,
+        l.is_default_risk,
+        a.district_id,
+        a.district_name,
+        a.region,
+        a.avg_salary,
+        a.unemployment_rate_95,
+        a.crime_rate_95,
+        a.total_transactions,
+        a.total_credits,
+        a.total_debits,
+        a.avg_monthly_balance,
+        a.last_transaction_date,
+        c.client_id,
+        c.gender,
+        c.date_of_birth,
+        c.age
+    from loans l
+    left join accounts_enriched a using (account_id)
+    left join customers c using (account_id)
+)
+
+select * from fct_loans
+    );
+  
+[0m12:44:02.320750 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:44:04.228957 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:d55712e2-af2b-477d-aeee-f061ee034bb3&page=queryresults
+[0m12:44:04.356278 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:d55712e2-af2b-477d-aeee-f061ee034bb3&page=queryresults
+[0m12:44:04.356278 [debug] [Thread-1 (]: Database Error in model fct_loans (models\marts\risk\fct_loans.sql)
+  Name loan_start_date not found inside l at [36:11]
+  compiled code at target\run\czech_banking\models\marts\risk\fct_loans.sql
+[0m12:44:04.367171 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f4db960c-00d3-4a2c-8366-fe759e00888f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF521D3B00>]}
+[0m12:44:04.367171 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model dbt_dev.fct_loans ........................ [[31mERROR[0m in 2.09s]
+[0m12:44:04.368596 [debug] [Thread-1 (]: Finished running node model.czech_banking.fct_loans
+[0m12:44:04.369598 [debug] [Thread-7 (]: Marking all children of 'model.czech_banking.fct_loans' to be skipped because of status 'error'.  Reason: Database Error in model fct_loans (models\marts\risk\fct_loans.sql)
+  Name loan_start_date not found inside l at [36:11]
+  compiled code at target\run\czech_banking\models\marts\risk\fct_loans.sql.
+[0m12:44:04.372114 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:44:04.373027 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:44:04.373027 [debug] [MainThread]: Connection 'list_czech-banking-analysis' was properly closed.
+[0m12:44:04.373027 [debug] [MainThread]: Connection 'list_czech-banking-analysis_dbt_dev' was properly closed.
+[0m12:44:04.373027 [debug] [MainThread]: Connection 'model.czech_banking.fct_loans' was properly closed.
+[0m12:44:04.373027 [info ] [MainThread]: 
+[0m12:44:04.376562 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 6.91 seconds (6.91s).
+[0m12:44:04.376562 [debug] [MainThread]: Command end result
+[0m12:44:04.412122 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\manifest.json
+[0m12:44:04.416127 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\semantic_manifest.json
+[0m12:44:04.422846 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\joana.jo\czech_banking\czech_banking\target\run_results.json
+[0m12:44:04.422846 [info ] [MainThread]: 
+[0m12:44:04.422846 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m12:44:04.422846 [info ] [MainThread]: 
+[0m12:44:04.422846 [error] [MainThread]: [31mFailure in model fct_loans (models\marts\risk\fct_loans.sql)[0m
+[0m12:44:04.428715 [error] [MainThread]:   Database Error in model fct_loans (models\marts\risk\fct_loans.sql)
+  Name loan_start_date not found inside l at [36:11]
+  compiled code at target\run\czech_banking\models\marts\risk\fct_loans.sql
+[0m12:44:04.429725 [info ] [MainThread]: 
+[0m12:44:04.430374 [info ] [MainThread]:   compiled code at target\compiled\czech_banking\models\marts\risk\fct_loans.sql
+[0m12:44:04.430374 [info ] [MainThread]: 
+[0m12:44:04.433525 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m12:44:04.435692 [debug] [MainThread]: Command `dbt run` failed at 12:44:04.434471 after 9.87 seconds
+[0m12:44:04.436218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF54869700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF71BFBCE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF71828320>]}
+[0m12:44:04.436218 [debug] [MainThread]: Flushing usage events
+[0m12:44:05.521462 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:45:44.030608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BA3538F2F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BA3183A930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BA34A78BC0>]}
+
+
+============================== 12:45:44.038470 | 722084b7-2de1-43dc-98c0-a34f55413867 ==============================
+[0m12:45:44.038470 [info ] [MainThread]: Running with dbt=1.11.7
+[0m12:45:44.040487 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\joana.jo\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run --select fct_loans', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\joana.jo\\czech_banking\\czech_banking\\logs'}
+[0m12:45:45.964636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '722084b7-2de1-43dc-98c0-a34f55413867', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BA32243410>]}
+[0m12:45:46.043436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '722084b7-2de1-43dc-98c0-a34f55413867', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BA510A5D30>]}
+[0m12:45:46.044438 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m12:45:46.896624 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m12:45:47.108641 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:45:47.108641 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m12:45:47.109828 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:45:47.116834 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.czech_banking.marts.finance.fct_transactions
+[0m12:45:47.175255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '722084b7-2de1-43dc-98c0-a34f55413867', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BA51BE3FE0>]}
+[0m12:45:47.302378 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\manifest.json
+[0m12:45:47.306410 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\semantic_manifest.json
+[0m12:45:47.346670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '722084b7-2de1-43dc-98c0-a34f55413867', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BA51FA8890>]}
+[0m12:45:47.347674 [info ] [MainThread]: Found 9 models, 8 sources, 538 macros
+[0m12:45:47.348670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '722084b7-2de1-43dc-98c0-a34f55413867', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BA367B1490>]}
+[0m12:45:47.350784 [info ] [MainThread]: 
+[0m12:45:47.351786 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m12:45:47.353362 [info ] [MainThread]: 
+[0m12:45:47.354561 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:45:47.359075 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_czech-banking-analysis'
+[0m12:45:47.360085 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:45:52.583767 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_czech-banking-analysis_dbt_dev'
+[0m12:45:52.584772 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:45:53.596846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '722084b7-2de1-43dc-98c0-a34f55413867', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BA36845580>]}
+[0m12:45:53.598713 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:45:53.608477 [debug] [Thread-1 (]: Began running node model.czech_banking.fct_loans
+[0m12:45:53.609503 [info ] [Thread-1 (]: 1 of 1 START sql table model dbt_dev.fct_loans ................................. [RUN]
+[0m12:45:53.610874 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.czech_banking.fct_loans'
+[0m12:45:53.610874 [debug] [Thread-1 (]: Began compiling node model.czech_banking.fct_loans
+[0m12:45:53.622469 [debug] [Thread-1 (]: Writing injected SQL for node "model.czech_banking.fct_loans"
+[0m12:45:53.624458 [debug] [Thread-1 (]: Began executing node model.czech_banking.fct_loans
+[0m12:45:53.671773 [debug] [Thread-1 (]: Writing runtime sql for node "model.czech_banking.fct_loans"
+[0m12:45:53.672776 [debug] [Thread-1 (]: On model.czech_banking.fct_loans: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.fct_loans"} */
+
+  
+    
+
+    create or replace table `czech-banking-analysis`.`dbt_dev`.`fct_loans`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      with loans as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_loans`
+),
+
+accounts_enriched as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`int_accounts_enriched`
+),
+
+customers as (
+    select
+        account_id,
+        client_id,
+        gender,
+        date_of_birth,
+        age
+    from `czech-banking-analysis`.`dbt_dev`.`int_customers_with_accounts`
+),
+
+fct_loans as (
+    select
+        l.loan_id,
+        l.account_id,
+        l.loan_date,
+        l.loan_amount,
+        l.loan_duration_months,
+        l.monthly_payment,
+        l.loan_status,
+        l.loan_status_label,
+        l.loan_active_status,
+        l.is_default_risk,
+        a.district_id,
+        a.district_name,
+        a.region,
+        a.avg_salary,
+        a.unemployment_rate_95,
+        a.crime_rate_95,
+        a.total_transactions,
+        a.total_credits,
+        a.total_debits,
+        a.avg_monthly_balance,
+        a.last_transaction_date,
+        c.client_id,
+        c.gender,
+        c.date_of_birth,
+        c.age
+    from loans l
+    left join accounts_enriched a using (account_id)
+    left join customers c using (account_id)
+)
+
+select * from fct_loans
+    );
+  
+[0m12:45:53.673775 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:45:55.351336 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:648b1bca-33e4-43db-837f-69fee41f56d6&page=queryresults
+[0m12:45:58.028473 [debug] [Thread-1 (]: SQL status: OK in 2.676 seconds
+[0m12:45:58.421776 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '722084b7-2de1-43dc-98c0-a34f55413867', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BA51997350>]}
+[0m12:45:58.421776 [info ] [Thread-1 (]: 1 of 1 OK created sql table model dbt_dev.fct_loans ............................ [[32mCREATE TABLE (827.0 rows, 39.9 MiB processed)[0m in 4.81s]
+[0m12:45:58.422760 [debug] [Thread-1 (]: Finished running node model.czech_banking.fct_loans
+[0m12:45:58.426196 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:45:58.427356 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:45:58.427356 [debug] [MainThread]: Connection 'list_czech-banking-analysis' was properly closed.
+[0m12:45:58.427356 [debug] [MainThread]: Connection 'list_czech-banking-analysis_dbt_dev' was properly closed.
+[0m12:45:58.428360 [debug] [MainThread]: Connection 'model.czech_banking.fct_loans' was properly closed.
+[0m12:45:58.428360 [info ] [MainThread]: 
+[0m12:45:58.429876 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 11.07 seconds (11.07s).
+[0m12:45:58.430883 [debug] [MainThread]: Command end result
+[0m12:45:58.465548 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\manifest.json
+[0m12:45:58.468545 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\semantic_manifest.json
+[0m12:45:58.475739 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\joana.jo\czech_banking\czech_banking\target\run_results.json
+[0m12:45:58.476112 [info ] [MainThread]: 
+[0m12:45:58.477133 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:45:58.477133 [info ] [MainThread]: 
+[0m12:45:58.479193 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m12:45:58.481203 [debug] [MainThread]: Command `dbt run` succeeded at 12:45:58.480205 after 14.68 seconds
+[0m12:45:58.481203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BA51575640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BA51FA8890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BA348D0620>]}
+[0m12:45:58.481203 [debug] [MainThread]: Flushing usage events
+[0m12:45:59.607551 [debug] [MainThread]: An error was encountered while trying to flush usage events
