@@ -1,4 +1,3 @@
-
 -- Answers Q1: What customer and account characteristics are most associated with loan default?
 -- Granularity: one row per combination of gender, region, and loan active status.
 
@@ -27,23 +26,19 @@ with loan_default_risk as (
         -- Using age_at_loan_date not current age — dataset is from 1993-1998
         round(avg(age_at_loan_date), 0) as avg_age_at_loan_date,
 
-        -- Regional characteristics to answer: Does the local economy explain default rates?
-        -- unemployment_rate_95 = unemployment rate in 1995 from the districts table.
-        -- Regional characteristics — does local economy and safety explain default rates?
+        -- Regional characteristics to answer: Does the local economy and safety explain default rates?
         round(avg(safe_cast(unemployment_rate_95 as float64)), 2) as avg_unemployment,
         round(avg(safe_cast(crime_rate_95 as float64)), 2) as avg_crime_rate,
         round(avg(safe_cast(avg_salary as float64)), 0) as avg_district_salary,
 
         -- Account activity to answer: Does engagement predict financial health?
-        -- total_transactions comes from int_accounts_enriched transaction summary
         round(avg(total_transactions), 0) as avg_transactions_per_account,
         round(avg(total_credits), 0) as avg_total_credits,
         round(avg(total_debits), 0) as avg_total_debits
 
     from {{ ref('fct_loans') }}
 
-    -- Grouping by these three dimensions to let us compare default rates
-    -- Across gender, geography, and whether the loan is still active or not.
+    -- Grouping by these three dimensions to let us compare default rates across gender, geography, and whether the loan is still active or not.
     group by gender, region, loan_active_status
 )
 
