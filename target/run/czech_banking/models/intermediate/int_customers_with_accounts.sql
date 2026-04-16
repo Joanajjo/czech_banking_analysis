@@ -28,6 +28,11 @@ customers_with_accounts as (
     from clients c
     left join dispositions d using (client_id)
     left join accounts a using (account_id)
+    -- After running dbt test, duplicate loan_id rows were flagged in fct_loans (145 duplicates).
+    -- Root cause: one account can have multiple clients linked to it (OWNER + DISPONENT).
+    -- When joining to fct_loans on account_id, this created one row per client per loan, instead of one row per loan.
+    -- Fix: filter to OWNER only so each account maps to exactly one client, ensuring loan_id remains unique in fct_loans.
+    where d.disposition_type = 'OWNER'
 )
 
 select * from customers_with_accounts;

@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: fct_loans
+    description: "Fact table combining loans with account enrichment and customer demographics. One row per loan."
+    columns:
+      - name: loan_id
+        description: "Primary key — unique identifier for each loan."
+        tests:
+          - unique
+          - not_null
+      - name: account_id
+        description: "Foreign key to dim accounts."
+        tests:
+          - not_null
+      - name: loan_status
+        description: "Raw status code from source — A, B, C or D."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['A', 'B', 'C', 'D']
+      - name: is_default_risk
+        description: "Boolean flag — true if loan status is B or D."
+        tests:
+          - not_null
+      - name: loan_amount
+        description: "Loan amount in CZK."
+        tests:
+          - not_null
+
+  - name: rpt_loan_default_risk
+    description: "Q1 — Default rates by gender, region and loan active status."
+    columns:
+      - name: default_rate_pct
+        description: "Percentage of loans that defaulted in this group."
+        tests:
+          - not_null
+
+  - name: rpt_account_activity_vs_default
+    description: "Q2 — Account activity comparison between defaulters and non-defaulters."
+    columns:
+      - name: is_default_risk
+        description: "Grouping dimension — true for defaulters, false for non-defaulters."
+        tests:
+          - not_null
+          - unique
+
+  - name: rpt_district_benchmarks
+    description: "Q3 — Default rates by district with economic indicators."
+    columns:
+      - name: district_name
+        description: "Primary dimension — one row per district."
+        tests:
+          - not_null
+          - unique
+
+  - name: rpt_loan_risk_by_size
+    description: "Q4 — Default rates by loan size bucket and duration."
+    columns:
+      - name: default_rate_pct
+        description: "Percentage of loans that defaulted in this bucket."
+        tests:
+          - not_null
