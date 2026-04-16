@@ -11,8 +11,8 @@ customers as (
         account_id,
         client_id,
         gender,
-        date_of_birth,
-        age
+        date_of_birth
+        -- note: not pulling age here — we calculate it below using loan_date
     from {{ ref('int_customers_with_accounts') }}
 ),
 
@@ -42,7 +42,8 @@ fct_loans as (
         c.client_id,
         c.gender,
         c.date_of_birth,
-        c.age
+        -- Age calculated at loan date, not today as the dataset is historical and we want to understand risk at the time of the loan.
+        date_diff(l.loan_date, c.date_of_birth, year)  as age_at_loan_date
     from loans l
     left join accounts_enriched a using (account_id)
     left join customers c using (account_id)

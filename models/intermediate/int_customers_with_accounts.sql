@@ -15,6 +15,7 @@ customers_with_accounts as (
         c.client_id,
         c.gender,
         c.date_of_birth,
+        -- Age at current date (note: dataset is from 1993-1998)
         date_diff(current_date(), c.date_of_birth, year)  as age,
         d.account_id,
         d.disposition_type as account_role,

@@ -13,10 +13,10 @@ renamed as (
         a8 as number_of_municipalities_with_10000_or_more_residents,
         a9 as number_of_cities,
         a10 as ratio_of_resitends_to_cities,
-        a11 as avg_salary,
-        a12 as unemployment_rate_95,
-        a13 as unemployment_rate_96,
-        a15 as crime_rate_95
+        safe_cast(a11 as float64) as avg_salary,
+        safe_cast(a12 as float64) as unemployment_rate_95,
+        safe_cast(a13 as float64) as unemployment_rate_96,
+        safe_cast(a15 as float64) as crime_rate_95
     from source
 
 )
