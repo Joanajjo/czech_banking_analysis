@@ -5814,3 +5814,882 @@ select * from district_benchmarks
 [0m14:07:32.388237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CD55A8F3B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CD55A8CBF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CD55A8C7A0>]}
 [0m14:07:32.388237 [debug] [MainThread]: Flushing usage events
 [0m14:07:33.657479 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:20:24.183932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273F059AE40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273F05996A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273F0599F70>]}
+
+
+============================== 14:20:24.192135 | 63dacffa-0bd2-4b19-8c16-eddae6b5b72c ==============================
+[0m14:20:24.192135 [info ] [MainThread]: Running with dbt=1.11.7
+[0m14:20:24.192135 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\joana.jo\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt run --select rpt_loan_risk_by_size', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\joana.jo\\czech_banking\\czech_banking\\logs'}
+[0m14:20:27.060569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '63dacffa-0bd2-4b19-8c16-eddae6b5b72c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273F1DE2DE0>]}
+[0m14:20:27.131757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '63dacffa-0bd2-4b19-8c16-eddae6b5b72c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273FFF0DEB0>]}
+[0m14:20:27.131757 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m14:20:27.594072 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m14:20:27.726795 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:20:27.726795 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m14:20:27.726795 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:20:27.726795 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.czech_banking.marts.finance.fct_transactions
+[0m14:20:27.765716 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '63dacffa-0bd2-4b19-8c16-eddae6b5b72c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002738D35AB10>]}
+[0m14:20:27.827384 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\manifest.json
+[0m14:20:27.827384 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\semantic_manifest.json
+[0m14:20:27.870753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '63dacffa-0bd2-4b19-8c16-eddae6b5b72c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002738D654560>]}
+[0m14:20:27.873738 [info ] [MainThread]: Found 13 models, 8 sources, 538 macros
+[0m14:20:27.873738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '63dacffa-0bd2-4b19-8c16-eddae6b5b72c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002738D794FE0>]}
+[0m14:20:27.876292 [info ] [MainThread]: 
+[0m14:20:27.876292 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:20:27.877291 [info ] [MainThread]: 
+[0m14:20:27.877291 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:20:27.880032 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_czech-banking-analysis'
+[0m14:20:27.881088 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:20:32.833225 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_czech-banking-analysis_dbt_dev'
+[0m14:20:32.833225 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:20:33.749458 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '63dacffa-0bd2-4b19-8c16-eddae6b5b72c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273FF24E8A0>]}
+[0m14:20:33.749458 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:20:33.757919 [debug] [Thread-1 (]: Began running node model.czech_banking.rpt_loan_risk_by_size
+[0m14:20:33.757919 [info ] [Thread-1 (]: 1 of 1 START sql table model dbt_dev.rpt_loan_risk_by_size ..................... [RUN]
+[0m14:20:33.773052 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.czech_banking.rpt_loan_risk_by_size'
+[0m14:20:33.773786 [debug] [Thread-1 (]: Began compiling node model.czech_banking.rpt_loan_risk_by_size
+[0m14:20:33.774676 [debug] [Thread-1 (]: Writing injected SQL for node "model.czech_banking.rpt_loan_risk_by_size"
+[0m14:20:33.774676 [debug] [Thread-1 (]: Began executing node model.czech_banking.rpt_loan_risk_by_size
+[0m14:20:33.825659 [debug] [Thread-1 (]: Writing runtime sql for node "model.czech_banking.rpt_loan_risk_by_size"
+[0m14:20:33.825659 [debug] [Thread-1 (]: On model.czech_banking.rpt_loan_risk_by_size: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.rpt_loan_risk_by_size"} */
+
+  
+    
+
+    create or replace table `czech-banking-analysis`.`dbt_dev`.`rpt_loan_risk_by_size`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      -- Answers Q4: Is there a loan amount or duration threshold above which default risk increases significantly?
+-- Granularity: one row per loan amount bucket
+
+with loan_buckets as (
+    select
+        -- Bucketing loan amounts into three bands to see if larger loans have higher default rates. The buckets are defined as: Small: under 100,000 CZK, Medium: 100,000 - 200,000 CZK, Large: over 200,000 CZK
+        case
+            when loan_amount < 100000  then '1_Small (under 100k)'
+            when loan_amount < 200000  then '2_Medium (100k-200k)'
+            else                            '3_Large (over 200k)'
+        end                                             as loan_size_bucket,
+
+        -- Using actual duration values (confirmed in BigQuery only 5 exist): 12, 24, 36, 48, 60 months
+        loan_duration_months,
+        loan_id,
+        loan_amount,
+        monthly_payment,
+        is_default_risk,
+        loan_active_status,
+        avg_salary,
+        unemployment_rate_95
+
+    from `czech-banking-analysis`.`dbt_dev`.`fct_loans`
+),
+
+aggregated as (
+    select
+        loan_size_bucket,
+        loan_duration_months,
+        count(loan_id)                                              as total_loans,
+        countif(is_default_risk = true)                             as total_defaults,
+        round(countif(is_default_risk = true) * 100.0
+              / count(loan_id), 1)                                  as default_rate_pct,
+        round(avg(loan_amount), 0)                                  as avg_loan_amount,
+        round(min(loan_amount), 0)                                  as min_loan_amount,
+        round(max(loan_amount), 0)                                  as max_loan_amount,
+        round(avg(monthly_payment), 0)                              as avg_monthly_payment,
+        round(avg(safe_cast(avg_salary as float64)), 0)             as avg_district_salary,
+        round(avg(safe_cast(unemployment_rate_95 as float64)), 2)   as avg_unemployment
+    from loan_buckets
+    group by loan_size_bucket, loan_duration_months
+)
+
+select * from aggregated
+order by loan_size_bucket, loan_duration_months
+    );
+  
+[0m14:20:33.825659 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:20:35.074315 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:91830201-e71f-498b-b855-8cdb02adea51&page=queryresults
+[0m14:20:37.000350 [debug] [Thread-1 (]: SQL status: OK in 1.918 seconds
+[0m14:20:37.364006 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '63dacffa-0bd2-4b19-8c16-eddae6b5b72c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002738D0EB020>]}
+[0m14:20:37.364006 [info ] [Thread-1 (]: 1 of 1 OK created sql table model dbt_dev.rpt_loan_risk_by_size ................ [[32mCREATE TABLE (14.0 rows, 39.5 KiB processed)[0m in 3.60s]
+[0m14:20:37.364006 [debug] [Thread-1 (]: Finished running node model.czech_banking.rpt_loan_risk_by_size
+[0m14:20:37.364006 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:20:37.364006 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:20:37.370792 [debug] [MainThread]: Connection 'list_czech-banking-analysis' was properly closed.
+[0m14:20:37.370792 [debug] [MainThread]: Connection 'list_czech-banking-analysis_dbt_dev' was properly closed.
+[0m14:20:37.370792 [debug] [MainThread]: Connection 'model.czech_banking.rpt_loan_risk_by_size' was properly closed.
+[0m14:20:37.370792 [info ] [MainThread]: 
+[0m14:20:37.374621 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 9.49 seconds (9.49s).
+[0m14:20:37.376683 [debug] [MainThread]: Command end result
+[0m14:20:37.407356 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\manifest.json
+[0m14:20:37.417522 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\semantic_manifest.json
+[0m14:20:37.424204 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\joana.jo\czech_banking\czech_banking\target\run_results.json
+[0m14:20:37.424204 [info ] [MainThread]: 
+[0m14:20:37.424204 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:20:37.424204 [info ] [MainThread]: 
+[0m14:20:37.424204 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:20:37.424204 [debug] [MainThread]: Command `dbt run` succeeded at 14:20:37.424204 after 13.46 seconds
+[0m14:20:37.424204 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273FFC15580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273EFF206E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273EFF20C20>]}
+[0m14:20:37.424204 [debug] [MainThread]: Flushing usage events
+[0m14:20:38.646269 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:21:25.368935 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017B8E93DB20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017B910C3830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017B910C17F0>]}
+
+
+============================== 14:21:25.368935 | f3c68e79-0fd7-4164-be9b-b7e25452562b ==============================
+[0m14:21:25.368935 [info ] [MainThread]: Running with dbt=1.11.7
+[0m14:21:25.383867 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\joana.jo\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\joana.jo\\czech_banking\\czech_banking\\logs'}
+[0m14:21:27.951410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BABD1D460>]}
+[0m14:21:28.050796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017B8EB164B0>]}
+[0m14:21:28.050796 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m14:21:29.236262 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m14:21:29.563962 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:21:29.564862 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m14:21:29.566183 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:21:29.578768 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.czech_banking.marts.finance.fct_transactions
+[0m14:21:29.648083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAE3F6120>]}
+[0m14:21:29.832025 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\manifest.json
+[0m14:21:29.838019 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\semantic_manifest.json
+[0m14:21:29.887752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAE836240>]}
+[0m14:21:29.889760 [info ] [MainThread]: Found 13 models, 8 sources, 538 macros
+[0m14:21:29.890099 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAD589850>]}
+[0m14:21:29.895205 [info ] [MainThread]: 
+[0m14:21:29.896208 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:21:29.897209 [info ] [MainThread]: 
+[0m14:21:29.899215 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:21:29.911344 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_czech-banking-analysis'
+[0m14:21:29.913326 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:21:35.639651 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_czech-banking-analysis_dbt_dev'
+[0m14:21:35.640651 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:21:37.403757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAE6AA9F0>]}
+[0m14:21:37.404854 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:21:37.414823 [debug] [Thread-1 (]: Began running node model.czech_banking.stg_accounts
+[0m14:21:37.415169 [debug] [Thread-2 (]: Began running node model.czech_banking.stg_clients
+[0m14:21:37.417285 [debug] [Thread-3 (]: Began running node model.czech_banking.stg_dispositions
+[0m14:21:37.418296 [debug] [Thread-4 (]: Began running node model.czech_banking.stg_districts
+[0m14:21:37.416279 [info ] [Thread-1 (]: 1 of 13 START sql view model dbt_dev.stg_accounts .............................. [RUN]
+[0m14:21:37.420053 [info ] [Thread-2 (]: 2 of 13 START sql view model dbt_dev.stg_clients ............................... [RUN]
+[0m14:21:37.424059 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.czech_banking.stg_accounts'
+[0m14:21:37.421053 [info ] [Thread-3 (]: 3 of 13 START sql view model dbt_dev.stg_dispositions .......................... [RUN]
+[0m14:21:37.425051 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.czech_banking.stg_clients'
+[0m14:21:37.422051 [info ] [Thread-4 (]: 4 of 13 START sql view model dbt_dev.stg_districts ............................. [RUN]
+[0m14:21:37.426056 [debug] [Thread-1 (]: Began compiling node model.czech_banking.stg_accounts
+[0m14:21:37.427052 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.czech_banking.stg_dispositions'
+[0m14:21:37.428047 [debug] [Thread-2 (]: Began compiling node model.czech_banking.stg_clients
+[0m14:21:37.429050 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.czech_banking.stg_districts'
+[0m14:21:37.450728 [debug] [Thread-1 (]: Writing injected SQL for node "model.czech_banking.stg_accounts"
+[0m14:21:37.452729 [debug] [Thread-3 (]: Began compiling node model.czech_banking.stg_dispositions
+[0m14:21:37.460729 [debug] [Thread-2 (]: Writing injected SQL for node "model.czech_banking.stg_clients"
+[0m14:21:37.461729 [debug] [Thread-4 (]: Began compiling node model.czech_banking.stg_districts
+[0m14:21:37.469269 [debug] [Thread-3 (]: Writing injected SQL for node "model.czech_banking.stg_dispositions"
+[0m14:21:37.480092 [debug] [Thread-4 (]: Writing injected SQL for node "model.czech_banking.stg_districts"
+[0m14:21:37.482208 [debug] [Thread-1 (]: Began executing node model.czech_banking.stg_accounts
+[0m14:21:37.492184 [debug] [Thread-2 (]: Began executing node model.czech_banking.stg_clients
+[0m14:21:37.573078 [debug] [Thread-2 (]: Writing runtime sql for node "model.czech_banking.stg_clients"
+[0m14:21:37.574074 [debug] [Thread-3 (]: Began executing node model.czech_banking.stg_dispositions
+[0m14:21:37.574976 [debug] [Thread-4 (]: Began executing node model.czech_banking.stg_districts
+[0m14:21:37.580918 [debug] [Thread-1 (]: Writing runtime sql for node "model.czech_banking.stg_accounts"
+[0m14:21:37.588170 [debug] [Thread-3 (]: Writing runtime sql for node "model.czech_banking.stg_dispositions"
+[0m14:21:37.593178 [debug] [Thread-4 (]: Writing runtime sql for node "model.czech_banking.stg_districts"
+[0m14:21:37.595176 [debug] [Thread-2 (]: On model.czech_banking.stg_clients: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.stg_clients"} */
+
+
+  create or replace view `czech-banking-analysis`.`dbt_dev`.`stg_clients`
+  OPTIONS()
+  as with source as (
+    select * from `czech-banking-analysis`.`raw`.`clients`
+),
+
+renamed as (
+    select
+        client_id,
+        district_id,
+        case
+            when cast(substr(cast(birth_number as string), 3, 2) as int64) > 50
+            then 'F' else 'M'
+        end                                    as gender,
+        date(
+            1900 + cast(substr(cast(birth_number as string), 1, 2) as int64),
+            case when cast(substr(cast(birth_number as string), 3, 2) as int64) > 50
+                 then cast(substr(cast(birth_number as string), 3, 2) as int64) - 50
+                 else cast(substr(cast(birth_number as string), 3, 2) as int64) end,
+            cast(substr(cast(birth_number as string), 5, 2) as int64)
+        )                                      as date_of_birth
+    from source
+)
+
+select * from renamed;
+
+
+[0m14:21:37.596066 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m14:21:37.600766 [debug] [Thread-1 (]: On model.czech_banking.stg_accounts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.stg_accounts"} */
+
+
+  create or replace view `czech-banking-analysis`.`dbt_dev`.`stg_accounts`
+  OPTIONS()
+  as with source as (
+    Select *
+    from `czech-banking-analysis`.`raw`.`accounts`
+),
+renamed as (
+    select
+        account_id,
+        district_id,
+        frequency,
+        parse_date('%y%m%d', cast(date as string)) as account_created_on
+        from source
+)
+select * from renamed;
+
+
+[0m14:21:37.601778 [debug] [Thread-4 (]: On model.czech_banking.stg_districts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.stg_districts"} */
+
+
+  create or replace view `czech-banking-analysis`.`dbt_dev`.`stg_districts`
+  OPTIONS()
+  as with source as (
+    select * from `czech-banking-analysis`.`raw`.`districts`
+),
+renamed as (
+    SELECT
+        a1 as district_id,
+        a2 as district_name,
+        a3 as region,
+        a4 as number_of_residents,
+        a5 as number_of_municipalities_with_less_than_499_residents,
+        a6 as number_of_municipalities_with_500_to_1999_residents,
+        a7 as number_of_municipalities_with_2000_to_9999_residents,
+        a8 as number_of_municipalities_with_10000_or_more_residents,
+        a9 as number_of_cities,
+        a10 as ratio_of_resitends_to_cities,
+        safe_cast(a11 as float64) as avg_salary,
+        safe_cast(a12 as float64) as unemployment_rate_95,
+        safe_cast(a13 as float64) as unemployment_rate_96,
+        safe_cast(a15 as float64) as crime_rate_95
+    from source
+
+)
+select * from renamed;
+
+
+[0m14:21:37.602779 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:21:37.604787 [debug] [Thread-3 (]: On model.czech_banking.stg_dispositions: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.stg_dispositions"} */
+
+
+  create or replace view `czech-banking-analysis`.`dbt_dev`.`stg_dispositions`
+  OPTIONS()
+  as with source as (
+    select * from `czech-banking-analysis`.`raw`.`dispositions`
+),
+renamed as (
+    select 
+        disp_id as disposition_id,
+        client_id,
+        account_id,
+        type as disposition_type
+    from source
+)
+
+select * from renamed;
+
+
+[0m14:21:37.605890 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m14:21:37.608789 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m14:21:39.597210 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:e531ddbd-1791-46a9-bdc2-e88b5df8db40&page=queryresults
+[0m14:21:39.636694 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:8295a631-1b71-47c7-a942-e390c6f05ce0&page=queryresults
+[0m14:21:39.748679 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:d5e9a086-4a9a-43fc-a2c7-5f059e0640fd&page=queryresults
+[0m14:21:39.763904 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:5c711f76-a21b-47e2-ae90-d7737a0dca5c&page=queryresults
+[0m14:21:40.030072 [debug] [Thread-1 (]: SQL status: OK in 0.431 seconds
+[0m14:21:40.048961 [debug] [Thread-2 (]: SQL status: OK in 0.411 seconds
+[0m14:21:40.113546 [debug] [Thread-3 (]: SQL status: OK in 0.364 seconds
+[0m14:21:40.144549 [debug] [Thread-4 (]: SQL status: OK in 0.379 seconds
+[0m14:21:40.381718 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017B91097290>]}
+[0m14:21:40.382718 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAFC94B30>]}
+[0m14:21:40.384719 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAE4435C0>]}
+[0m14:21:40.383720 [info ] [Thread-4 (]: 4 of 13 OK created sql view model dbt_dev.stg_districts ........................ [[32mCREATE VIEW (0 processed)[0m in 2.94s]
+[0m14:21:40.385719 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAE1830B0>]}
+[0m14:21:40.387162 [info ] [Thread-1 (]: 1 of 13 OK created sql view model dbt_dev.stg_accounts ......................... [[32mCREATE VIEW (0 processed)[0m in 2.95s]
+[0m14:21:40.389599 [debug] [Thread-4 (]: Finished running node model.czech_banking.stg_districts
+[0m14:21:40.388266 [info ] [Thread-3 (]: 3 of 13 OK created sql view model dbt_dev.stg_dispositions ..................... [[32mCREATE VIEW (0 processed)[0m in 2.95s]
+[0m14:21:40.392700 [debug] [Thread-1 (]: Finished running node model.czech_banking.stg_accounts
+[0m14:21:40.391701 [info ] [Thread-2 (]: 2 of 13 OK created sql view model dbt_dev.stg_clients .......................... [[32mCREATE VIEW (0 processed)[0m in 2.96s]
+[0m14:21:40.393699 [debug] [Thread-4 (]: Began running node model.czech_banking.stg_loans
+[0m14:21:40.395927 [debug] [Thread-3 (]: Finished running node model.czech_banking.stg_dispositions
+[0m14:21:40.396924 [debug] [Thread-1 (]: Began running node model.czech_banking.stg_transactions
+[0m14:21:40.397924 [debug] [Thread-2 (]: Finished running node model.czech_banking.stg_clients
+[0m14:21:40.398924 [info ] [Thread-4 (]: 5 of 13 START sql view model dbt_dev.stg_loans ................................. [RUN]
+[0m14:21:40.400922 [info ] [Thread-1 (]: 6 of 13 START sql view model dbt_dev.stg_transactions .......................... [RUN]
+[0m14:21:40.401924 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.czech_banking.stg_districts, now model.czech_banking.stg_loans)
+[0m14:21:40.402929 [debug] [Thread-3 (]: Began running node model.czech_banking.int_customers_with_accounts
+[0m14:21:40.403930 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.czech_banking.stg_accounts, now model.czech_banking.stg_transactions)
+[0m14:21:40.404933 [debug] [Thread-4 (]: Began compiling node model.czech_banking.stg_loans
+[0m14:21:40.407510 [debug] [Thread-1 (]: Began compiling node model.czech_banking.stg_transactions
+[0m14:21:40.406417 [info ] [Thread-3 (]: 7 of 13 START sql view model dbt_dev.int_customers_with_accounts ............... [RUN]
+[0m14:21:40.414425 [debug] [Thread-4 (]: Writing injected SQL for node "model.czech_banking.stg_loans"
+[0m14:21:40.420614 [debug] [Thread-1 (]: Writing injected SQL for node "model.czech_banking.stg_transactions"
+[0m14:21:40.421214 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.czech_banking.stg_dispositions, now model.czech_banking.int_customers_with_accounts)
+[0m14:21:40.423222 [debug] [Thread-3 (]: Began compiling node model.czech_banking.int_customers_with_accounts
+[0m14:21:40.431036 [debug] [Thread-3 (]: Writing injected SQL for node "model.czech_banking.int_customers_with_accounts"
+[0m14:21:40.433036 [debug] [Thread-4 (]: Began executing node model.czech_banking.stg_loans
+[0m14:21:40.438083 [debug] [Thread-4 (]: Writing runtime sql for node "model.czech_banking.stg_loans"
+[0m14:21:40.439138 [debug] [Thread-1 (]: Began executing node model.czech_banking.stg_transactions
+[0m14:21:40.447756 [debug] [Thread-1 (]: Writing runtime sql for node "model.czech_banking.stg_transactions"
+[0m14:21:40.448758 [debug] [Thread-3 (]: Began executing node model.czech_banking.int_customers_with_accounts
+[0m14:21:40.450756 [debug] [Thread-4 (]: On model.czech_banking.stg_loans: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.stg_loans"} */
+
+
+  create or replace view `czech-banking-analysis`.`dbt_dev`.`stg_loans`
+  OPTIONS()
+  as with source as (
+    select * from `czech-banking-analysis`.`raw`.`loans`
+),
+renamed as (
+    select
+        loan_id,
+        account_id,
+        parse_date('%y%m%d', cast(date as string)) as loan_date,
+        amount as loan_amount,
+        duration as loan_duration_months,
+        payments as monthly_payment,
+        status as loan_status,
+        -- Status A and B are finished loans. Assuming that by seeing old dates and shorter durations. C and D are active loans (recent dates and longer durations in general), with D being in debt.
+        case status
+            when 'A' then 'Finished - No Problems'
+            when 'B' then 'Finished - Unpaid'
+            when 'C' then 'Running - OK'
+            when 'D' then 'Running - In Debt'
+        end as loan_status_label,
+
+        -- Active flag based on your earliest loan and lastest loan dates. These range between 93/07-94/07 and 97/09 and 98/12.
+        case status
+            when 'A' then 'Inactive'
+            when 'B' then 'Inactive'
+            when 'C' then 'Active'
+            when 'D' then 'Active'
+        end as loan_active_status,
+
+        -- Risk flag! Assuming that the loans in status B and D are at risk, as they are either unpaid or in debt.
+        case
+            when status in ('B', 'D') then true
+            else false
+        end as is_default_risk
+    from source
+)
+select * from renamed;
+
+
+[0m14:21:40.453423 [debug] [Thread-1 (]: On model.czech_banking.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.stg_transactions"} */
+
+
+  create or replace view `czech-banking-analysis`.`dbt_dev`.`stg_transactions`
+  OPTIONS()
+  as With source as (
+    select
+        *
+    from `czech-banking-analysis`.`raw`.`transactions`
+),
+
+renamed as ( 
+    select
+        trans_id as transaction_id,
+        account_id,
+        parse_date('%y%m%d', cast(date as string)) as transaction_date,
+        type as transaction_type,
+        operation as operation_type,
+        amount as transaction_amount,
+        balance as balance_after_transaction,
+        k_symbol as transaction_category,
+        bank as counterpart_bank,
+        account as counterpart_account
+    from source
+
+)
+
+select * from renamed;
+
+
+[0m14:21:40.457449 [debug] [Thread-3 (]: Writing runtime sql for node "model.czech_banking.int_customers_with_accounts"
+[0m14:21:40.461400 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:21:40.463410 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:21:40.469409 [debug] [Thread-3 (]: On model.czech_banking.int_customers_with_accounts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.int_customers_with_accounts"} */
+
+
+  create or replace view `czech-banking-analysis`.`dbt_dev`.`int_customers_with_accounts`
+  OPTIONS()
+  as with clients as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_clients`
+),
+
+dispositions as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_dispositions`
+),
+
+accounts as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_accounts`
+),
+-- JOINING ALL TABLES NEEDED TO GET CUSTOMER-ACCOUNT RELATIONSHIP
+customers_with_accounts as (
+    select
+        c.client_id,
+        c.gender,
+        c.date_of_birth,
+        -- Age at current date (note: dataset is from 1993-1998)
+        date_diff(current_date(), c.date_of_birth, year)  as age,
+        d.account_id,
+        d.disposition_type as account_role,
+        a.frequency,
+        a.account_created_on
+    from clients c
+    left join dispositions d using (client_id)
+    left join accounts a using (account_id)
+)
+
+select * from customers_with_accounts;
+
+
+[0m14:21:40.471407 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:21:42.461201 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:cc50ede9-447a-426a-8700-245443fb55ea&page=queryresults
+[0m14:21:42.573426 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:9e539dcb-3f26-45ac-be01-27c4de9a26bb&page=queryresults
+[0m14:21:42.827026 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:8a1489f2-f780-4cc9-8ae0-909571cbbb07&page=queryresults
+[0m14:21:42.910635 [debug] [Thread-1 (]: SQL status: OK in 0.448 seconds
+[0m14:21:42.917659 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAFD2C500>]}
+[0m14:21:42.919640 [info ] [Thread-1 (]: 6 of 13 OK created sql view model dbt_dev.stg_transactions ..................... [[32mCREATE VIEW (0 processed)[0m in 2.51s]
+[0m14:21:42.921643 [debug] [Thread-1 (]: Finished running node model.czech_banking.stg_transactions
+[0m14:21:42.922643 [debug] [Thread-2 (]: Began running node model.czech_banking.int_accounts_enriched
+[0m14:21:42.923640 [info ] [Thread-2 (]: 8 of 13 START sql view model dbt_dev.int_accounts_enriched ..................... [RUN]
+[0m14:21:42.924642 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.czech_banking.stg_clients, now model.czech_banking.int_accounts_enriched)
+[0m14:21:42.925642 [debug] [Thread-2 (]: Began compiling node model.czech_banking.int_accounts_enriched
+[0m14:21:42.935089 [debug] [Thread-2 (]: Writing injected SQL for node "model.czech_banking.int_accounts_enriched"
+[0m14:21:42.937089 [debug] [Thread-2 (]: Began executing node model.czech_banking.int_accounts_enriched
+[0m14:21:42.943086 [debug] [Thread-2 (]: Writing runtime sql for node "model.czech_banking.int_accounts_enriched"
+[0m14:21:42.948085 [debug] [Thread-2 (]: On model.czech_banking.int_accounts_enriched: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.int_accounts_enriched"} */
+
+
+  create or replace view `czech-banking-analysis`.`dbt_dev`.`int_accounts_enriched`
+  OPTIONS()
+  as with accounts as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_accounts`
+),
+
+districts as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_districts`
+),
+
+transaction_summary as (
+    select
+        account_id,
+        count(*) as total_transactions,
+        sum(case when transaction_type = 'PRIJEM'
+                 then transaction_amount else 0 end) as total_credits,
+        sum(case when transaction_type = 'VYDAJ'
+                 then transaction_amount else 0 end) as total_debits,
+        avg(balance_after_transaction) as avg_monthly_balance,
+        max(transaction_date) as last_transaction_date
+    from `czech-banking-analysis`.`dbt_dev`.`stg_transactions`
+    group by account_id
+),
+
+accounts_enriched as (
+    select
+        a.account_id,
+        a.district_id,
+        a.frequency,
+        a.account_created_on,
+        d.district_name,
+        d.region,
+        d.avg_salary,
+        d.unemployment_rate_95,
+        d.crime_rate_95,
+        t.total_transactions,
+        t.total_credits,
+        t.total_debits,
+        t.avg_monthly_balance,
+        t.last_transaction_date
+    from accounts a
+    left join districts d using (district_id)
+    left join transaction_summary t using (account_id)
+)
+
+select * from accounts_enriched;
+
+
+[0m14:21:42.951090 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:21:42.999099 [debug] [Thread-4 (]: SQL status: OK in 0.425 seconds
+[0m14:21:43.003614 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAFC552E0>]}
+[0m14:21:43.009020 [info ] [Thread-4 (]: 5 of 13 OK created sql view model dbt_dev.stg_loans ............................ [[32mCREATE VIEW (0 processed)[0m in 2.60s]
+[0m14:21:43.012232 [debug] [Thread-4 (]: Finished running node model.czech_banking.stg_loans
+[0m14:21:43.197595 [debug] [Thread-3 (]: SQL status: OK in 0.370 seconds
+[0m14:21:43.203851 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAFD65190>]}
+[0m14:21:43.204759 [info ] [Thread-3 (]: 7 of 13 OK created sql view model dbt_dev.int_customers_with_accounts .......... [[32mCREATE VIEW (0 processed)[0m in 2.78s]
+[0m14:21:43.207005 [debug] [Thread-3 (]: Finished running node model.czech_banking.int_customers_with_accounts
+[0m14:21:45.080546 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:ebf6ba53-fcdf-4bb5-9562-ffc8bff79826&page=queryresults
+[0m14:21:45.519347 [debug] [Thread-2 (]: SQL status: OK in 0.438 seconds
+[0m14:21:45.526894 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAFCA00E0>]}
+[0m14:21:45.529898 [info ] [Thread-2 (]: 8 of 13 OK created sql view model dbt_dev.int_accounts_enriched ................ [[32mCREATE VIEW (0 processed)[0m in 2.60s]
+[0m14:21:45.531892 [debug] [Thread-2 (]: Finished running node model.czech_banking.int_accounts_enriched
+[0m14:21:45.533356 [debug] [Thread-1 (]: Began running node model.czech_banking.fct_loans
+[0m14:21:45.535324 [info ] [Thread-1 (]: 9 of 13 START sql table model dbt_dev.fct_loans ................................ [RUN]
+[0m14:21:45.536338 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.czech_banking.stg_transactions, now model.czech_banking.fct_loans)
+[0m14:21:45.537328 [debug] [Thread-1 (]: Began compiling node model.czech_banking.fct_loans
+[0m14:21:45.547525 [debug] [Thread-1 (]: Writing injected SQL for node "model.czech_banking.fct_loans"
+[0m14:21:45.551554 [debug] [Thread-1 (]: Began executing node model.czech_banking.fct_loans
+[0m14:21:45.582698 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:21:47.452439 [debug] [Thread-1 (]: Writing runtime sql for node "model.czech_banking.fct_loans"
+[0m14:21:47.460468 [debug] [Thread-1 (]: On model.czech_banking.fct_loans: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.fct_loans"} */
+
+  
+    
+
+    create or replace table `czech-banking-analysis`.`dbt_dev`.`fct_loans`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      with loans as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`stg_loans`
+),
+
+accounts_enriched as (
+    select * from `czech-banking-analysis`.`dbt_dev`.`int_accounts_enriched`
+),
+
+customers as (
+    select
+        account_id,
+        client_id,
+        gender,
+        date_of_birth
+        -- note: not pulling age here — we calculate it below using loan_date
+    from `czech-banking-analysis`.`dbt_dev`.`int_customers_with_accounts`
+),
+
+fct_loans as (
+    select
+        l.loan_id,
+        l.account_id,
+        l.loan_date,
+        l.loan_amount,
+        l.loan_duration_months,
+        l.monthly_payment,
+        l.loan_status,
+        l.loan_status_label,
+        l.loan_active_status,
+        l.is_default_risk,
+        a.district_id,
+        a.district_name,
+        a.region,
+        a.avg_salary,
+        a.unemployment_rate_95,
+        a.crime_rate_95,
+        a.total_transactions,
+        a.total_credits,
+        a.total_debits,
+        a.avg_monthly_balance,
+        a.last_transaction_date,
+        c.client_id,
+        c.gender,
+        c.date_of_birth,
+        -- Age calculated at loan date, not today as the dataset is historical and we want to understand risk at the time of the loan.
+        date_diff(l.loan_date, c.date_of_birth, year)  as age_at_loan_date
+    from loans l
+    left join accounts_enriched a using (account_id)
+    left join customers c using (account_id)
+)
+
+select * from fct_loans
+    );
+  
+[0m14:21:48.277332 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:5d3380f1-06fe-44f5-847b-49e35f255442&page=queryresults
+[0m14:21:53.367163 [debug] [Thread-1 (]: SQL status: OK in 5.088 seconds
+[0m14:21:53.540683 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAFD2C500>]}
+[0m14:21:53.543679 [info ] [Thread-1 (]: 9 of 13 OK created sql table model dbt_dev.fct_loans ........................... [[32mCREATE TABLE (827.0 rows, 39.9 MiB processed)[0m in 8.00s]
+[0m14:21:53.546189 [debug] [Thread-1 (]: Finished running node model.czech_banking.fct_loans
+[0m14:21:53.548198 [debug] [Thread-3 (]: Began running node model.czech_banking.rpt_account_activity_vs_default
+[0m14:21:53.549200 [debug] [Thread-2 (]: Began running node model.czech_banking.rpt_district_benchmarks
+[0m14:21:53.551308 [debug] [Thread-4 (]: Began running node model.czech_banking.rpt_loan_default_risk
+[0m14:21:53.551308 [info ] [Thread-3 (]: 10 of 13 START sql table model dbt_dev.rpt_account_activity_vs_default ......... [RUN]
+[0m14:21:53.553202 [debug] [Thread-1 (]: Began running node model.czech_banking.rpt_loan_risk_by_size
+[0m14:21:53.554199 [info ] [Thread-2 (]: 11 of 13 START sql table model dbt_dev.rpt_district_benchmarks ................. [RUN]
+[0m14:21:53.558198 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.czech_banking.int_customers_with_accounts, now model.czech_banking.rpt_account_activity_vs_default)
+[0m14:21:53.561210 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.czech_banking.int_accounts_enriched, now model.czech_banking.rpt_district_benchmarks)
+[0m14:21:53.556206 [info ] [Thread-4 (]: 12 of 13 START sql table model dbt_dev.rpt_loan_default_risk ................... [RUN]
+[0m14:21:53.563201 [debug] [Thread-3 (]: Began compiling node model.czech_banking.rpt_account_activity_vs_default
+[0m14:21:53.565203 [debug] [Thread-2 (]: Began compiling node model.czech_banking.rpt_district_benchmarks
+[0m14:21:53.559196 [info ] [Thread-1 (]: 13 of 13 START sql table model dbt_dev.rpt_loan_risk_by_size ................... [RUN]
+[0m14:21:53.567234 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.czech_banking.stg_loans, now model.czech_banking.rpt_loan_default_risk)
+[0m14:21:53.590144 [debug] [Thread-2 (]: Writing injected SQL for node "model.czech_banking.rpt_district_benchmarks"
+[0m14:21:53.596144 [debug] [Thread-3 (]: Writing injected SQL for node "model.czech_banking.rpt_account_activity_vs_default"
+[0m14:21:53.598758 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.czech_banking.fct_loans, now model.czech_banking.rpt_loan_risk_by_size)
+[0m14:21:53.600099 [debug] [Thread-4 (]: Began compiling node model.czech_banking.rpt_loan_default_risk
+[0m14:21:53.602637 [debug] [Thread-1 (]: Began compiling node model.czech_banking.rpt_loan_risk_by_size
+[0m14:21:53.612525 [debug] [Thread-4 (]: Writing injected SQL for node "model.czech_banking.rpt_loan_default_risk"
+[0m14:21:53.621844 [debug] [Thread-1 (]: Writing injected SQL for node "model.czech_banking.rpt_loan_risk_by_size"
+[0m14:21:53.623844 [debug] [Thread-3 (]: Began executing node model.czech_banking.rpt_account_activity_vs_default
+[0m14:21:53.622843 [debug] [Thread-2 (]: Began executing node model.czech_banking.rpt_district_benchmarks
+[0m14:21:53.630632 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:21:53.625843 [debug] [Thread-4 (]: Began executing node model.czech_banking.rpt_loan_default_risk
+[0m14:21:53.639684 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:21:53.640682 [debug] [Thread-1 (]: Began executing node model.czech_banking.rpt_loan_risk_by_size
+[0m14:21:53.645680 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:21:53.656216 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:21:55.386426 [debug] [Thread-2 (]: Writing runtime sql for node "model.czech_banking.rpt_district_benchmarks"
+[0m14:21:55.390768 [debug] [Thread-2 (]: On model.czech_banking.rpt_district_benchmarks: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.rpt_district_benchmarks"} */
+
+  
+    
+
+    create or replace table `czech-banking-analysis`.`dbt_dev`.`rpt_district_benchmarks`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      -- Answers Q3: Which districts have the highest default rates and does local unemployment explain it?
+-- Granularity: one row per district
+
+with district_benchmarks as (
+    select
+        -- your dimensions here
+        district_name,
+        region,
+        count(loan_id) as total_loans,
+        countif(is_default_risk = true) as total_defaults,
+        round(countif(is_default_risk = true) * 100.0 / count(loan_id), 1) as default_rate_pct,
+        -- Economic indicators to answer: Does local economy explain default rates?
+        round(avg(safe_cast(unemployment_rate_95 as float64)), 2) as avg_unemployment_95,
+        round(avg(safe_cast(crime_rate_95 as float64)), 2) as avg_crime_rate_95,
+        round(avg(safe_cast(avg_salary as float64)), 0) as avg_salary
+
+
+    from `czech-banking-analysis`.`dbt_dev`.`fct_loans`
+    group by district_name, region
+)
+
+select * from district_benchmarks
+    );
+  
+[0m14:21:55.407579 [debug] [Thread-4 (]: Writing runtime sql for node "model.czech_banking.rpt_loan_default_risk"
+[0m14:21:55.407579 [debug] [Thread-3 (]: Writing runtime sql for node "model.czech_banking.rpt_account_activity_vs_default"
+[0m14:21:55.407579 [debug] [Thread-4 (]: On model.czech_banking.rpt_loan_default_risk: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.rpt_loan_default_risk"} */
+
+  
+    
+
+    create or replace table `czech-banking-analysis`.`dbt_dev`.`rpt_loan_default_risk`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      -- Answers Q1: What customer and account characteristics are most associated with loan default?
+-- Granularity: one row per combination of gender, region, and loan active status.
+
+with loan_default_risk as (
+    select
+        -- Dimensions we are grouping by — the characteristics we want to analyse
+        gender,
+        region,
+        loan_active_status,
+
+        -- Volume metrics
+        count(loan_id) as total_loans,
+        countif(is_default_risk = true) as total_defaults,
+
+        -- Default rate = defaults / total loans * 100
+        -- The 100.0 forces a decimal division instead of integer division
+        round(countif(is_default_risk = true) * 100.0 
+              / count(loan_id), 1) as default_rate_pct,
+
+        -- Loan characteristics to answer: Do defaulters borrow more or for longer?
+        round(avg(loan_amount), 0) as avg_loan_amount,
+        round(avg(loan_duration_months), 0) as avg_duration_months,
+        round(avg(monthly_payment), 0) as avg_monthly_payment,
+
+        -- Customer characteristics to answer: Does age correlate with default?
+        -- Using age_at_loan_date not current age — dataset is from 1993-1998
+        round(avg(age_at_loan_date), 0) as avg_age_at_loan_date,
+
+        -- Regional characteristics to answer: Does the local economy and safety explain default rates?
+        round(avg(safe_cast(unemployment_rate_95 as float64)), 2) as avg_unemployment,
+        round(avg(safe_cast(crime_rate_95 as float64)), 2) as avg_crime_rate,
+        round(avg(safe_cast(avg_salary as float64)), 0) as avg_district_salary,
+
+        -- Account activity to answer: Does engagement predict financial health?
+        round(avg(total_transactions), 0) as avg_transactions_per_account,
+        round(avg(total_credits), 0) as avg_total_credits,
+        round(avg(total_debits), 0) as avg_total_debits
+
+    from `czech-banking-analysis`.`dbt_dev`.`fct_loans`
+
+    -- Grouping by these three dimensions to let us compare default rates across gender, geography, and whether the loan is still active or not.
+    group by gender, region, loan_active_status
+)
+
+select * from loan_default_risk
+    );
+  
+[0m14:21:55.407579 [debug] [Thread-3 (]: On model.czech_banking.rpt_account_activity_vs_default: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.rpt_account_activity_vs_default"} */
+
+  
+    
+
+    create or replace table `czech-banking-analysis`.`dbt_dev`.`rpt_account_activity_vs_default`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      -- Answers Q2: Do high-activity accounts default less on loans?
+-- Granularity: one row per default risk group (true = defaulted, false = no default)
+
+with account_activity as (
+    select
+        is_default_risk,
+        count(loan_id)                              as total_loans,
+
+        -- Transaction activity: Do defaulters use their accounts less?
+        round(avg(total_transactions), 0) as avg_transactions,
+        round(avg(total_credits), 0) as avg_total_credits,
+        round(avg(total_debits), 0) as avg_total_debits,
+
+        -- Balance: Do defaulters have lower or higher balances?
+        round(avg(avg_monthly_balance), 0)          as avg_monthly_balance,
+
+        -- Loan characteristics: do defaulters borrow more?
+        round(avg(loan_amount), 0) as avg_loan_amount,
+        round(avg(loan_duration_months), 0) as avg_duration_months,
+        round(avg(monthly_payment), 0) as avg_monthly_payment,
+
+        -- Customer context: Do defaulters tend to be younger or older?
+        round(avg(age_at_loan_date), 0) as avg_age_at_loan_date,
+
+        -- Regional context to answer: Are defaulters in poorer areas?
+        round(avg(safe_cast(avg_salary as float64)), 0) as avg_district_salary,
+        round(avg(safe_cast(unemployment_rate_95 as float64)), 2) as avg_unemployment
+
+    from `czech-banking-analysis`.`dbt_dev`.`fct_loans`
+    group by is_default_risk
+)
+
+select * from account_activity
+    );
+  
+[0m14:21:55.423512 [debug] [Thread-1 (]: Writing runtime sql for node "model.czech_banking.rpt_loan_risk_by_size"
+[0m14:21:55.423512 [debug] [Thread-1 (]: On model.czech_banking.rpt_loan_risk_by_size: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "czech_banking", "target_name": "dev", "node_id": "model.czech_banking.rpt_loan_risk_by_size"} */
+
+  
+    
+
+    create or replace table `czech-banking-analysis`.`dbt_dev`.`rpt_loan_risk_by_size`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      -- Answers Q4: Is there a loan amount or duration threshold above which default risk increases significantly?
+-- Granularity: one row per loan amount bucket
+
+with loan_buckets as (
+    select
+        -- Bucketing loan amounts into three bands to see if larger loans have higher default rates. The buckets are defined as: Small: under 100,000 CZK, Medium: 100,000 - 200,000 CZK, Large: over 200,000 CZK
+        case
+            when loan_amount < 100000  then '1_Small (under 100k)'
+            when loan_amount < 200000  then '2_Medium (100k-200k)'
+            else                            '3_Large (over 200k)'
+        end                                             as loan_size_bucket,
+
+        -- Using actual duration values (confirmed in BigQuery only 5 exist): 12, 24, 36, 48, 60 months
+        loan_duration_months,
+        loan_id,
+        loan_amount,
+        monthly_payment,
+        is_default_risk,
+        loan_active_status,
+        avg_salary,
+        unemployment_rate_95
+
+    from `czech-banking-analysis`.`dbt_dev`.`fct_loans`
+),
+
+aggregated as (
+    select
+        loan_size_bucket,
+        loan_duration_months,
+        count(loan_id)                                              as total_loans,
+        countif(is_default_risk = true)                             as total_defaults,
+        round(countif(is_default_risk = true) * 100.0
+              / count(loan_id), 1)                                  as default_rate_pct,
+        round(avg(loan_amount), 0)                                  as avg_loan_amount,
+        round(min(loan_amount), 0)                                  as min_loan_amount,
+        round(max(loan_amount), 0)                                  as max_loan_amount,
+        round(avg(monthly_payment), 0)                              as avg_monthly_payment,
+        round(avg(safe_cast(avg_salary as float64)), 0)             as avg_district_salary,
+        round(avg(safe_cast(unemployment_rate_95 as float64)), 2)   as avg_unemployment
+    from loan_buckets
+    group by loan_size_bucket, loan_duration_months
+)
+
+select * from aggregated
+order by loan_size_bucket, loan_duration_months
+    );
+  
+[0m14:21:55.676579 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:a5060a72-4592-4ae2-82fe-bd86ac98c227&page=queryresults
+[0m14:21:55.688479 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:67d8a248-9016-4c26-b88a-b27da172a0f8&page=queryresults
+[0m14:21:55.923727 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:d926d3f6-8485-461b-9894-dc5a2a058034&page=queryresults
+[0m14:21:55.924042 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=czech-banking-analysis&j=bq:EU:07f25f8e-5c0c-4c7f-af05-83e0cf50c0ed&page=queryresults
+[0m14:21:57.675556 [debug] [Thread-4 (]: SQL status: OK in 1.986 seconds
+[0m14:21:57.814047 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAFD26A80>]}
+[0m14:21:57.820679 [info ] [Thread-4 (]: 12 of 13 OK created sql table model dbt_dev.rpt_loan_default_risk .............. [[32mCREATE TABLE (32.0 rows, 92.6 KiB processed)[0m in 4.25s]
+[0m14:21:57.822447 [debug] [Thread-4 (]: Finished running node model.czech_banking.rpt_loan_default_risk
+[0m14:21:58.491358 [debug] [Thread-1 (]: SQL status: OK in 2.568 seconds
+[0m14:21:58.639656 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAFC126F0>]}
+[0m14:21:58.651090 [info ] [Thread-1 (]: 13 of 13 OK created sql table model dbt_dev.rpt_loan_risk_by_size .............. [[32mCREATE TABLE (14.0 rows, 39.5 KiB processed)[0m in 5.04s]
+[0m14:21:58.653784 [debug] [Thread-1 (]: Finished running node model.czech_banking.rpt_loan_risk_by_size
+[0m14:21:59.018293 [debug] [Thread-2 (]: SQL status: OK in 3.341 seconds
+[0m14:21:59.055517 [debug] [Thread-3 (]: SQL status: OK in 3.127 seconds
+[0m14:21:59.190832 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAFC56660>]}
+[0m14:21:59.191835 [info ] [Thread-2 (]: 11 of 13 OK created sql table model dbt_dev.rpt_district_benchmarks ............ [[32mCREATE TABLE (77.0 rows, 47.3 KiB processed)[0m in 5.63s]
+[0m14:21:59.194834 [debug] [Thread-2 (]: Finished running node model.czech_banking.rpt_district_benchmarks
+[0m14:21:59.206032 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3c68e79-0fd7-4164-be9b-b7e25452562b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017BAFD8C4A0>]}
+[0m14:21:59.206032 [info ] [Thread-3 (]: 10 of 13 OK created sql table model dbt_dev.rpt_account_activity_vs_default .... [[32mCREATE TABLE (2.0 rows, 71.8 KiB processed)[0m in 5.65s]
+[0m14:21:59.206032 [debug] [Thread-3 (]: Finished running node model.czech_banking.rpt_account_activity_vs_default
+[0m14:21:59.206032 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:21:59.206032 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:21:59.221392 [debug] [MainThread]: Connection 'list_czech-banking-analysis' was properly closed.
+[0m14:21:59.223417 [debug] [MainThread]: Connection 'list_czech-banking-analysis_dbt_dev' was properly closed.
+[0m14:21:59.224219 [debug] [MainThread]: Connection 'model.czech_banking.rpt_loan_risk_by_size' was properly closed.
+[0m14:21:59.225336 [debug] [MainThread]: Connection 'model.czech_banking.rpt_district_benchmarks' was properly closed.
+[0m14:21:59.226334 [debug] [MainThread]: Connection 'model.czech_banking.rpt_account_activity_vs_default' was properly closed.
+[0m14:21:59.227350 [debug] [MainThread]: Connection 'model.czech_banking.rpt_loan_default_risk' was properly closed.
+[0m14:21:59.229324 [info ] [MainThread]: 
+[0m14:21:59.231337 [info ] [MainThread]: Finished running 5 table models, 8 view models in 0 hours 0 minutes and 29.33 seconds (29.33s).
+[0m14:21:59.237232 [debug] [MainThread]: Command end result
+[0m14:21:59.493744 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\manifest.json
+[0m14:21:59.502742 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\joana.jo\czech_banking\czech_banking\target\semantic_manifest.json
+[0m14:21:59.530435 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\joana.jo\czech_banking\czech_banking\target\run_results.json
+[0m14:21:59.531459 [info ] [MainThread]: 
+[0m14:21:59.533440 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:21:59.536441 [info ] [MainThread]: 
+[0m14:21:59.539722 [info ] [MainThread]: Done. PASS=13 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=13
+[0m14:21:59.545715 [debug] [MainThread]: Command `dbt run` succeeded at 14:21:59.544724 after 34.40 seconds
+[0m14:21:59.546727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017B90D01A00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017B8EBC0F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017B8B92AD50>]}
+[0m14:21:59.548733 [debug] [MainThread]: Flushing usage events
+[0m14:22:01.645417 [debug] [MainThread]: An error was encountered while trying to flush usage events
